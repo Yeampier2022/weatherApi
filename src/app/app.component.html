@@ -19,9 +19,7 @@
     <div class="weather-data">
       <div class="locaticion">
         {{ weatherData.name }}
-        <div class="temperature">
-          {{ weatherData.main.temp | number : "1.0-0" }}°
-        </div>
+        <div class="temperature">{{ weatherData.main.temp | twoNumber }}°</div>
       </div>
     </div>
   </div>
@@ -34,7 +32,7 @@
           <span>min</span>
         </div>
         <div class="info-block-value">
-          {{ weatherData.main.temp_min | number : "1.0-0" }}ºc
+          {{ weatherData.main.temp_min | twoNumber }}ºc
         </div>
       </div>
       <div class="info-block">
@@ -43,7 +41,7 @@
           <span>max</span>
         </div>
         <div class="info-block-value">
-          {{ weatherData.main.temp_max | number : "1.0-0" }}ºc
+          {{ weatherData.main.temp_max | twoNumber}}ºc
         </div>
       </div>
       <div class="info-block">
